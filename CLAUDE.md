@@ -14,15 +14,17 @@ Todo vive en un único archivo autocontenido, sin build ni dependencias:
 - `manifest.json` + `icon-192.png`, `icon-512.png`, `apple-touch-icon.png` — instalación en pantalla de inicio.
 - `.nojekyll` — necesario para GitHub Pages; no borrar.
 
-Pantallas (secciones `id="s-..."`, navegación con barra inferior Inicio · Presupuesto · Info):
+Pantallas (secciones `id="s-..."`, navegación con barra inferior Inicio · Trabajos · Presupuesto · Info):
 
 - `s-inicio` — hero, tarjetas Tatuajes / Piercings (llevan al presupuesto con el tipo preseleccionado), horario, galería "Conoce La Tatuajeria" con lightbox.
+- `s-trabajos` — publicaciones de Instagram incrustadas (embed oficial) a partir de la lista `IG_POSTS`, con botón Seguir. Si la lista está vacía muestra un mensaje "Muy pronto…".
 - `s-presupuesto` — formulario tatuaje/piercing → genera resumen y enlace de WhatsApp (`#wa-link`).
 - `s-info` — pestañas FAQ (`i-faq`), Mapa del dolor (`i-dolor`), Proceso y cuidados (`i-proceso`).
 
 ## Configuración clave (en `index.html`)
 
 - **WhatsApp del estudio:** `https://wa.me/34677444696` (se rellena con el mensaje del presupuesto).
+- **Publicaciones de Trabajos:** array `IG_POSTS` en el `<script>` (sección "Trabajos"). Admite enlaces `instagram.com/p/…`, `/reel/…` y `/tv/…`, con o sin `?igsh=`. Para añadir o quitar publicaciones se edita esa lista; el orden de la lista es el orden en pantalla. Las publicaciones deben ser de una cuenta pública.
 - **Horario:** L–V 10:00–14:00 · 16:00–20:00, sábado 10:00–14:00, domingo cerrado. Solo con cita previa.
 
 ## Estilo visual
@@ -39,6 +41,7 @@ Pantallas (secciones `id="s-..."`, navegación con barra inferior Inicio · Pres
 ## Historial
 
 - Nov 2026: eliminada la pestaña "Servicios" (grid de trabajos / feed de Instagram) a petición de Pedro.
+- Nov 2026: añadida la pestaña "Trabajos" con publicaciones de Instagram elegidas a mano (lista `IG_POSTS`).
 
 ## Pendientes conocidos
 
